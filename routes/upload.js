@@ -12,7 +12,7 @@ exports.save = function(req, res){
     var upfile_data = req.files.upfile;
     var req_path = req.param('path');
     var unzip = require('unzip');
-    
+    var zipfile = '';
     //write file
     function write_file(file_data) {
         if (req_path != '/')
@@ -21,10 +21,7 @@ exports.save = function(req, res){
         
         switch ( path.extname(file_data.name) ) {
             case '.zip':
-                fs.createReadStream(file_data.path).pipe(unzip.Extract({path: target_dir}))
-                .on('close', function(){
-                    console.log('extract');    
-                });
+                zipfile = fs.createReadStream(file_data.path).pipe(unzip.Extract({path: target_dir}));
                 
                 /*
                 fs.readFile(file_data.path, 'binary', function (err, data) {
@@ -71,4 +68,7 @@ exports.save = function(req, res){
         });
     }
     
+    zipfile.on('close', function () {
+	res.redirect('back');
+    }); 
 };
