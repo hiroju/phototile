@@ -12,6 +12,11 @@ p {
     font-family: mplus-2p-light;    
 }
 
+.newinfo {
+    color: white;
+    background-color: #f08080;
+}
+
 .continer-fluid {
     height: 100%;    
 }
