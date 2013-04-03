@@ -3,7 +3,6 @@
 # Package Files #
 *.jar
 *.war
-.DS_Store
 
 # gwt caches and compiled units #
 war/gwt_bree/

@@ -1,0 +1,117 @@
+
+html{
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding-top: 40px;
+}
+
+p {
+    font-family: mplus-2p-light;    
+}
+
+.continer-fluid {
+    height: 100%;    
+}
+
+.continer-fluid > .row-fluid {
+    height: 100%;    
+} 
+
+#title {
+    font-family: mplus-1p-thin;
+    margin-left: 30px;    
+}
+
+#sidebar {
+    padding: 10px 0 0 0;    
+}
+
+#sidebar p {
+    font-size: 12pt;
+    border-bottom: 1px black solid;    
+}
+
+#main {
+    border-left: 1px #aaa solid;    
+}
+
+.dir {
+    position: relative; 
+    text-align: center;
+    background-color: #555;
+    color: white;
+    
+    height: 140px;
+    font-size: 18pt;
+    display: inline-block;
+}
+
+.topdir {
+    background-color: black; 
+}
+
+.dir p {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.content {
+    width: 22%;
+    margin: 20px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.file {
+    text-align: center;
+}
+
+.file img {
+    width:100%;
+}
+
+.clear {
+    display:block;    
+}
+
+.option {
+    position:absolute; 
+    width: 100%;
+    height: 25px;
+    top: 0px;
+    background-color: #ddd;
+    display: none;
+}
+
+.option > form {
+    height: 18px;
+    width: 24px;
+}
+
+.upload {
+    position: relative;
+    overflow: hidden;  
+    height: 18px;
+    width: 24px;
+}
+
+.upload i {
+    position: absolute;
+    top: 0;
+    left: 5px;    
+} 
+
+.option input[type='file'] { 
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 18px;
+    width: 24px;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+}
