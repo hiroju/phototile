@@ -17,3 +17,5 @@ war/WEB-INF/classes/
 
 # Mac
 .DS_Store
+
+strage/*
