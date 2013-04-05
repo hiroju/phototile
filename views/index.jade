@@ -3,7 +3,7 @@ extends layout
 block content
     .navbar.navbar-inverse.navbar-fixed-top
         .navbar-inner
-            a#title.brand(href='#') PhotoStream
+            a#title.brand(href='#') Phototile
             .container
                 .btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
                 
@@ -23,13 +23,15 @@ block content
                 p ・写真アップしたいときはできるだけ小さめ（1枚数百kbくらい）に圧縮してからアップしてや。
             
             #main.span10
-                each item in dir_data.files
-                    if (item.isDirectory)
-                        .clear
-                        .content.topdir.dir(path= dir_data.dir_path+item.name)
-                            p #{item.name}
+                if(err != true) 
+                    each item in dir_data.files
+                        if (item.isDirectory)
+                            .clear
+                            .content.topdir.dir(path= dir_data.dir_path+item.name)
+                                p #{item.name}
                         
-                    else 
-                        .content.file(id= item.name)
-                            img(src='/file?path=/'+ item.name)
-                            .option
+                        else 
+                            .content.file(id= item.name)
+                                img(src='/file?path=/'+ item.name)
+                                .option
+                

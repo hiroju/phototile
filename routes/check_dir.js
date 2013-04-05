@@ -7,7 +7,11 @@ exports.list = function(req, res){
     
     var ev_check = check_dir.check(root_dir, req_path);
     
-    ev_check.on('checked', function (files) {
-        res.json(files);
+    ev_check.on('checked', function (err, files) {
+        if (err) {
+            res.json({error: true});
+        }else {
+            res.json(files);
+        }
     });
 };

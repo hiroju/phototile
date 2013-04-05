@@ -11,7 +11,11 @@ exports.index = function(req, res){
     var EventEmitter = require('events').EventEmitter;
     var ev = new EventEmitter;
     
-    list.on('checked',function (dir_data) {
-        res.render('index', { dir_data: dir_data});
+    list.on('checked',function (err, dir_data) {
+        if (err) {
+            res.render('index', { err: true});  
+        }else {
+            res.render('index', { err: false, dir_data: dir_data});
+        }
     });
 };
