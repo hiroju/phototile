@@ -52,7 +52,8 @@ $(document).ready(function () {
                                 ph.appendimg(next_path);
                             });
                             //add created dir to clicked dir
-                            target.after($('<div>').addClass('clear'), file);                            
+                            //target.after($('<div>').addClass('clear'), file); 
+                            target.after(file); 
                         }else {
                             //Create Image Div
                             var filepath = '/file?path='+json.dir_path + '/' + item.name;
