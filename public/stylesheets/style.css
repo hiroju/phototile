@@ -54,7 +54,8 @@ p {
 .file {
     height: 192px;
     width: 272px;
-    overflow: scroll;
+    overflow: auto;
+    
 }
 
 .file img {
