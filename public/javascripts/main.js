@@ -56,8 +56,8 @@ $(document).ready(function () {
                         }else {
                             //Create Image Div
                             var filepath = '/file?path='+json.dir_path + '/' + item.name;
-                            var img = $('<img>').addClass('img-polaroid lazy').attr({ 'data-original': filepath, 'data-group': path});
-                            div = $('<div>').addClass('content file').attr('data-group', path);
+                            var img = $('<img>').addClass('lazy').attr({'data-original': filepath, 'data-group': path});
+                            div = $('<div>').addClass('content file thumbnail').attr('data-group', path);
                             file = div.append(img);
                             //add created img to clicked dir
                             target.after(file);
