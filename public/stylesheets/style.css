@@ -46,7 +46,7 @@ p {
 .dir {
     position: relative; 
     text-align: center;
-    background-color: #555;
+    border: 1px black solid;
     color: white;
     font-size: 18pt;
 }
@@ -70,6 +70,11 @@ p {
     position: absolute;
     bottom: 10px;
     text-align: center;
+    color: black;
+}
+
+.topdir p{
+    color: white;    
 }
 
 .clear {
@@ -96,7 +101,7 @@ p {
     width: 100%;
     height: 24px;
     top: 0px;
-    background-color: #ddd;
+    background-color: #444;
     display: none;
 }
 
