@@ -1,28 +1,14 @@
 extends layout
 
 block content
-    .navbar.navbar-inverse.navbar-fixed-top
-        .navbar-inner
-            a#title.brand(href='#') Phototile
-            .container
-                .btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
-                
-
     .container-fluid
-        .row-fluid
-            #sidebar.span2
-                p.newinfo 【お知らせ】
-                p.newinfo ・zipのアップロードはおそらく上手くいったかな？
-                p.newinfo ・zip展開の時に日本語ディレクトリあると文字化けするで
-                p.newinfo ・ディレクトリクリックで展開済みの写真を、もう一度クリックすることで閉じれるようにしました
-                p 【説明】
-                p ・黒タイルが一番上位のディレクトリで、灰色っぽいのがその下の階層にあるディレクトリや。
-                p ・黒タイルまたは灰色タイルをクリックすると中身の画像が展開されるで。
-                p ・タイルにカーソル持ってくと出てくるアイコン押したら、画像のアップロードができるで。
-                p ・フォルダごとzipでアップロードしたら勝手に解凍してくれる優れもんや（Macの標準zip圧縮使うとバグります）
-                p ・写真アップしたいときはできるだけ小さめ（1枚数百kbくらい）に圧縮してからアップしてや。
-            
-            #main.span10
+        #controllbar.row-fluid
+            .span10.offset1
+                
+        #main.row-fluid
+            #header
+                p Phototile
+            .span10.offset1
                 if(err != true) 
                     each item in dir_data.files
                         if (item.isDirectory)
