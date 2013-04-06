@@ -35,9 +35,10 @@ p {
 }
 
 .content {
-    height: 180px;
-    width: 250px;
-    margin: 16px;
+    height: 200px;
+    width: 280px;
+    margin: 5px;
+    margin-right: 0;
     display: inline-block;
     vertical-align: bottom;
 }
@@ -50,17 +51,15 @@ p {
     font-size: 18pt;
 }
 
-.thumbnail {
-     
-}
-
 .file {
+    height: 192px;
+    width: 272px;
     vertical-align: bottom;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .file img {
-    width: 250px; 
+    width: 240px; 
 }
 
 .topdir {
