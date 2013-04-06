@@ -54,12 +54,12 @@ p {
 .file {
     height: 192px;
     width: 272px;
-    vertical-align: bottom;
     overflow: scroll;
 }
 
 .file img {
-    width: 240px; 
+    width: 240px;
+    vertical-align: middle;
 }
 
 .topdir {
