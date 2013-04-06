@@ -81,15 +81,8 @@ p {
 .file img {
     position: relative;
     min-height: 170px;
-    max-height:100%;
     min-width: 240px;
-}
-
-.file img>i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;    
+    max-width: 100%;
 }
 
 .clear {
